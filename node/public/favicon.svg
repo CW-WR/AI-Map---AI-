@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <!-- 绿色主题背景渐变 -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+    <!-- 橙色北向箭头渐变 -->
+    <linearGradient id="northGrad" x1="50" y1="16" x2="50" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#fdba74"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <!-- 中心辉光 -->
+    <radialGradient id="hubGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ===== 背景圆角方块 ===== -->
+  <rect width="100" height="100" rx="22" fill="url(#bgGrad)"/>
+
+  <!-- ===== 外环（罗盘轮廓，半透明） ===== -->
+  <circle cx="50" cy="50" r="33" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+
+  <!-- ===== AI 节点连线（极淡，营造神经网络感） ===== -->
+  <line x1="28" y1="28" x2="50" y2="43" stroke="white" stroke-opacity="0.13" stroke-width="1.2"/>
+  <line x1="72" y1="28" x2="50" y2="43" stroke="white" stroke-opacity="0.13" stroke-width="1.2"/>
+  <line x1="28" y1="72" x2="43" y2="50" stroke="white" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="72" y1="72" x2="57" y2="50" stroke="white" stroke-opacity="0.10" stroke-width="1"/>
+
+  <!-- ===== 四向罗盘箭头 ===== -->
+  <!-- 南（白色，半透明） -->
+  <path d="M50,84 L43,52 L50,57 L57,52 Z" fill="white" fill-opacity="0.42"/>
+  <!-- 东（白色） -->
+  <path d="M84,50 L52,57 L57,50 L52,43 Z" fill="white" fill-opacity="0.68"/>
+  <!-- 西（白色） -->
+  <path d="M16,50 L48,43 L43,50 L48,57 Z" fill="white" fill-opacity="0.68"/>
+  <!-- 北（橙色渐变，主导向） -->
+  <path d="M50,16 L57,48 L50,43 L43,48 Z" fill="url(#northGrad)"/>
+
+  <!-- ===== 中心辉光圈 ===== -->
+  <circle cx="50" cy="50" r="10" fill="url(#hubGlow)"/>
+  <!-- 中心白色圆 -->
+  <circle cx="50" cy="50" r="5.5" fill="white"/>
+  <!-- 中心绿色核心点 -->
+  <circle cx="50" cy="50" r="2.2" fill="#16a34a"/>
+
+  <!-- ===== AI 节点（四角小圆点，代表神经节点） ===== -->
+  <circle cx="28" cy="28" r="2.2" fill="white" fill-opacity="0.35"/>
+  <circle cx="72" cy="28" r="2.2" fill="white" fill-opacity="0.35"/>
+  <circle cx="28" cy="72" r="2.2" fill="white" fill-opacity="0.22"/>
+  <circle cx="72" cy="72" r="2.2" fill="white" fill-opacity="0.22"/>
+
+  <!-- ===== 北向亮点（北极星/AI 信标） ===== -->
+  <circle cx="50" cy="22" r="2" fill="#fdba74" fill-opacity="0.85"/>
+</svg>

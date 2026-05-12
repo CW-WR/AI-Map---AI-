@@ -1,0 +1,1 @@
+import{J as a,q as c,y as s}from"./BiepgAjx.js";const l=()=>{const e=a("siteConfig",c({})),t=s(()=>e.value?.site_name||"AI导航"),i=s(()=>e.value?.site_description||""),o=s(()=>e.value?.site_keywords||"");return{siteConfig:e,siteName:t,siteDesc:i,siteKeywords:o,pageTitle:n=>s(()=>`${n} - ${t.value}`)}};export{l as u};
